@@ -4,7 +4,7 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-const name = 'Placeholder Site 🚧'
+const name = 'Placeholder Site v0.0.0 🚧'
 export const siteTitle = 'Next.js Sample Website'
 
 const ProtoLogo = () => (
@@ -62,7 +62,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Placeholder site"
         />
         <meta
           property="og:image"
