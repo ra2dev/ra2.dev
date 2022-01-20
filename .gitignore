@@ -102,3 +102,11 @@ dist
 
 # TernJS port file
 .tern-port
+
+#exclude intelliJ files
+.idea
+.vagrant
+.node
+*.iml
+*.iws
+*.ipr
