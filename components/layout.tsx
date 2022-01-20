@@ -4,7 +4,7 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-const name = 'Placeholder Site v0.0.0 🚧'
+const name = 'Placeholder Site v0.0.1-beta.1 🚧'
 export const siteTitle = 'Next.js Sample Website'
 
 const ProtoLogo = () => (
