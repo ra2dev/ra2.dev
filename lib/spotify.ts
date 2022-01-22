@@ -37,7 +37,6 @@ export const getNowPlaying = async () => {
 
 export const getTopTracks = async () => {
     const {access_token} = await getAccessToken()
-
     return fetch(TOP_TRACKS_ENDPOINT, {
         headers: {
             Authorization: `Bearer ${access_token}`
