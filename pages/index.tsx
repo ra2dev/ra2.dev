@@ -8,6 +8,9 @@ import Date from '../components/date'
 const About = () => {
     return (
         <div className='flex flex-col-reverse sm:flex-row items-start'>
+            <h1 className='font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white'>
+                🚧 Site WIP 🚧
+            </h1>
             <div className='flex flex-col pr-8'>
                 <h1 className='font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white'>
                     Raman Ramanouski
