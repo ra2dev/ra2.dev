@@ -14,7 +14,6 @@ const About = () => {
             <br />
             <br />
             <br />
-            <br />
             <div className='flex flex-col-reverse sm:flex-row items-start'>
                 <div className='flex flex-col pr-8'>
                     <h1 className='font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white'>
