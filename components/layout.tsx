@@ -5,6 +5,7 @@ import NextLink from 'next/link'
 import {useRouter} from 'next/router'
 import MobileMenu from './MobileMenu'
 import Footer from './Footer'
+import {LockClosedIcon} from '@heroicons/react/solid'
 
 const name = 'Placeholder Site v0.0.1-beta.1 🚧'
 export const siteTitle = 'Next.js Sample Website'
@@ -139,7 +140,7 @@ const ThemeBtn = () => {
     )
 }
 
-const Logo = ({className}) => {
+export const Logo = ({className}: any) => {
     return (
         <div
             className={cn('text-white p-1 pr-8 bg-gray-900 dark:text-gray-800 dark:bg-gray-300 rounded-sm', className)}
@@ -189,6 +190,15 @@ const Logo = ({className}) => {
 }
 
 export default function Layout({children}) {
+    const onLogout = async () => {
+        await fetch('/api/logout', {
+            method: 'post',
+            credentials: 'include',
+            headers: {'Content-Type': 'application/json'}
+        })
+        window.location.reload()
+    }
+
     return (
         <div className='dark:bg-gray-900 bg-white transition duration-500'>
             <Head>
@@ -216,7 +226,30 @@ export default function Layout({children}) {
                         <NavItem href='/snippets' text='Snippets' />
                         <NavItem href='/about' text='About' />
                     </div>
-                    <ThemeBtn />
+
+                    <div className='flex flex-row justify-between'>
+                        <ThemeBtn />
+                        <button
+                            onClick={onLogout}
+                            type='button'
+                            className='ml-2 w-9 h-9 bg-gray-white rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all'
+                        >
+                            <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                className='w-5 h-5 text-gray-800'
+                                fill='none'
+                                viewBox='0 0 24 24'
+                                stroke='currentColor'
+                            >
+                                <path
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    strokeWidth='2'
+                                    d='M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1'
+                                />
+                            </svg>
+                        </button>
+                    </div>
                 </nav>
             </div>
             <main className='flex flex-col justify-center px-8'>
