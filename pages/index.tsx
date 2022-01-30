@@ -4,6 +4,12 @@ import utilStyles from '../styles/utils.module.css'
 import {getSortedPostsData} from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
+import { Sandpack } from "@codesandbox/sandpack-react";
+import "@codesandbox/sandpack-react/dist/index.css";
+
+const code = `export default function App() {
+  return <h1>Hello Sandpack</h1>
+}`;
 
 const About = () => {
     return (
@@ -26,6 +32,7 @@ const About = () => {
                         Passionate about new technologies and long talks about the approach to programming.
                     </p>
                 </div>
+
                 <div className='w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto'>
                     <span
                         style={{
@@ -96,6 +103,14 @@ const About = () => {
                         />
                     </span>
                 </div>
+            </div>
+            <div>
+                <Sandpack
+                    template="react"
+                    files={{
+                        "/App.js": code,
+                    }}
+                />
             </div>
         </>
     )
