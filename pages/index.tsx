@@ -15,7 +15,7 @@ const About = () => {
     return (
         <>
             <h1 className='font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white'>
-                🚧 Site WIP v0.0.0-beta 🚧
+                🚧 Site WIP v0.0.1-beta 🚧
             </h1>
             <br />
             <br />
