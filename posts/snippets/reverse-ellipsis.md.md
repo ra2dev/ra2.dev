@@ -1,6 +1,6 @@
 ---
 title: "Reverse ellipsis"
-date: "2020-01-01"
+date: "2020-02-03"
 ---
 
 Work in progress.
