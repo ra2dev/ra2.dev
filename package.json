@@ -8,6 +8,7 @@
   "dependencies": {
     "@codesandbox/sandpack-react": "^0.13.8",
     "@heroicons/react": "^1.0.5",
+    "@mdx-js/loader": "^2.0.0",
     "@storyofams/next-password-protect": "^1.5.14",
     "@tailwindcss/forms": "^0.4.0",
     "classnames": "^2.3.1",
