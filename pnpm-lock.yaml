@@ -4,6 +4,8 @@ specifiers:
   '@codesandbox/sandpack-react': ^0.13.8
   '@heroicons/react': ^1.0.5
   '@mdx-js/loader': ^2.0.0
+  '@sentry/browser': ^6.17.5
+  '@sentry/tracing': ^6.17.5
   '@storyofams/next-password-protect': ^1.5.14
   '@tailwindcss/forms': ^0.4.0
   '@types/react': ^17.0.38
@@ -25,6 +27,8 @@ dependencies:
   '@codesandbox/sandpack-react': 0.13.8_react-dom@17.0.2+react@17.0.2
   '@heroicons/react': 1.0.5_react@17.0.2
   '@mdx-js/loader': 2.0.0
+  '@sentry/browser': 6.17.5
+  '@sentry/tracing': 6.17.5
   '@storyofams/next-password-protect': 1.5.14_227e7fb4dbd28186517209bc65f02635
   '@tailwindcss/forms': 0.4.0_tailwindcss@3.0.15
   classnames: 2.3.1
@@ -531,6 +535,69 @@ packages:
       react: 17.0.2
     dev: false
 
+  /@sentry/browser/6.17.5:
+    resolution: {integrity: sha512-3xZ+6HgEnnQpXEk+3YJyfHlsJzMbOBEnjs3ImAiJvKJLdPnRjhixbQwsiV9Fm2SG43o2bFABpGSE337rvy4JuA==}
+    engines: {node: '>=6'}
+    dependencies:
+      '@sentry/core': 6.17.5
+      '@sentry/types': 6.17.5
+      '@sentry/utils': 6.17.5
+      tslib: 1.14.1
+    dev: false
+
+  /@sentry/core/6.17.5:
+    resolution: {integrity: sha512-G1bYvZsWM5n0QYbnv89a24HCXex3rMWUnHWFysNqcWmw2YfiQ9RX5SakGbesewBj2Br2XpaDH0pED3QBUrC7yA==}
+    engines: {node: '>=6'}
+    dependencies:
+      '@sentry/hub': 6.17.5
+      '@sentry/minimal': 6.17.5
+      '@sentry/types': 6.17.5
+      '@sentry/utils': 6.17.5
+      tslib: 1.14.1
+    dev: false
+
+  /@sentry/hub/6.17.5:
+    resolution: {integrity: sha512-jBRrG0v3nHrymyj13Dv28aRS6xgQjWup45E0rljeksCxDL9frc734C0QGzGjE2MG7vZWtvd2CgP8uNbgYpwlTw==}
+    engines: {node: '>=6'}
+    dependencies:
+      '@sentry/types': 6.17.5
+      '@sentry/utils': 6.17.5
+      tslib: 1.14.1
+    dev: false
+
+  /@sentry/minimal/6.17.5:
+    resolution: {integrity: sha512-WY/IQh2tb4XDkvr/2/8LB0mO8W3cgL6S2Uv+YfVRqogGJRdg5wD67aQ9zypNMq+D84cPwRuR/+51Npj6daox4w==}
+    engines: {node: '>=6'}
+    dependencies:
+      '@sentry/hub': 6.17.5
+      '@sentry/types': 6.17.5
+      tslib: 1.14.1
+    dev: false
+
+  /@sentry/tracing/6.17.5:
+    resolution: {integrity: sha512-SVIDFL/QbNAlv+Rhgq14TqtTBp9WGipkjQXXaD/Pbqcj3/Oil7ZHHKYesW8Z+gtKQs73oQ9a0nCgraLFcQ68PQ==}
+    engines: {node: '>=6'}
+    dependencies:
+      '@sentry/hub': 6.17.5
+      '@sentry/minimal': 6.17.5
+      '@sentry/types': 6.17.5
+      '@sentry/utils': 6.17.5
+      tslib: 1.14.1
+    dev: false
+
+  /@sentry/types/6.17.5:
+    resolution: {integrity: sha512-mn7qKuOvmZRTomJ7BiJEw6DM8femAVQcuHa8hdvK1F6ldMfFVLen5Z2LYGE7iY36GEa1Ba/AGGEKyF8D29y2/Q==}
+    engines: {node: '>=6'}
+    dev: false
+
+  /@sentry/utils/6.17.5:
+    resolution: {integrity: sha512-MMCFCNWW73HRnqPVRGGSaMfSxtvvlNDgu1JFAOT2vnNkuf0mXvH301lyrh4pFJfntrtXOOk4bnGMhyWRlPADdA==}
+    engines: {node: '>=6'}
+    dependencies:
+      '@sentry/types': 6.17.5
+      tslib: 1.14.1
+    dev: false
+
   /@storyofams/next-password-protect/1.5.14_227e7fb4dbd28186517209bc65f02635:
     resolution: {integrity: sha512-eNc6VSx8iA/MgyIWYKsgPwKhRV2J0ddSKyvkIMKskLcOaQifRF6bSf/BinhG9juigGQx6HKQLLCYPaBspqk6WA==}
     peerDependencies:
@@ -618,11 +685,11 @@ packages:
     dev: true
 
   /@types/prop-types/15.7.4:
-    resolution: {integrity: sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==, registry: https://registry.yarnpkg.com/}
+    resolution: {integrity: sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz}
     dev: true
 
   /@types/react/17.0.38:
-    resolution: {integrity: sha512-SI92X1IA+FMnP3qM5m4QReluXzhcmovhZnLNm3pyeQlooi02qI7sLiepEYqT678uNiyc25XfCqxREFpy3W7YhQ==, registry: https://registry.yarnpkg.com/}
+    resolution: {integrity: sha512-SI92X1IA+FMnP3qM5m4QReluXzhcmovhZnLNm3pyeQlooi02qI7sLiepEYqT678uNiyc25XfCqxREFpy3W7YhQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.yarnpkg.com/@types/react/-/react-17.0.38.tgz}
     dependencies:
       '@types/prop-types': 15.7.4
       '@types/scheduler': 0.16.2
@@ -630,7 +697,7 @@ packages:
     dev: true
 
   /@types/scheduler/0.16.2:
-    resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==, registry: https://registry.yarnpkg.com/}
+    resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==, registry: https://registry.yarnpkg.com/, tarball: https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz}
     dev: true
 
   /@types/unist/2.0.6:
@@ -934,7 +1001,7 @@ packages:
     dev: true
 
   /csstype/3.0.10:
-    resolution: {integrity: sha512-2u44ZG2OcNUO9HDp/Jl8C07x6pU/eTR3ncV91SiK3dhG9TWvRVsCoJw14Ckx5DgWkzGA3waZWO3d7pgqpUI/XA==, registry: https://registry.yarnpkg.com/}
+    resolution: {integrity: sha512-2u44ZG2OcNUO9HDp/Jl8C07x6pU/eTR3ncV91SiK3dhG9TWvRVsCoJw14Ckx5DgWkzGA3waZWO3d7pgqpUI/XA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.yarnpkg.com/csstype/-/csstype-3.0.10.tgz}
     dev: true
 
   /d/1.0.1:
@@ -2507,6 +2574,10 @@ packages:
     resolution: {integrity: sha512-FnHq5sTMxC0sk957wHDzRnemFnNBvt/gSY99HzK8F7UP5WAbvP70yX5bd7CjEQkN+TjdxwI7g7lJ6podqrG2/w==}
     dev: false
 
+  /tslib/1.14.1:
+    resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
+    dev: false
+
   /type/1.2.0:
     resolution: {integrity: sha512-+5nt5AAniqsCnu2cEQQdpzCAh33kVx8n0VoFidKpB1dVVLAN/F+bgVOqOJqOnEnrhp222clB5p3vUlD+1QAnfg==}
     dev: false
@@ -2516,7 +2587,7 @@ packages:
     dev: false
 
   /typescript/4.5.4:
-    resolution: {integrity: sha512-VgYs2A2QIRuGphtzFV7aQJduJ2gyfTljngLzjpfW9FoYZF6xuw1W0vW9ghCKLfcWrCFxK81CSGRAvS1pn4fIUg==, registry: https://registry.yarnpkg.com/}
+    resolution: {integrity: sha512-VgYs2A2QIRuGphtzFV7aQJduJ2gyfTljngLzjpfW9FoYZF6xuw1W0vW9ghCKLfcWrCFxK81CSGRAvS1pn4fIUg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.yarnpkg.com/typescript/-/typescript-4.5.4.tgz}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
