@@ -4,19 +4,24 @@ import utilStyles from '../styles/utils.module.css'
 import {getSortedPostsData} from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
-import { Sandpack } from "@codesandbox/sandpack-react";
-import "@codesandbox/sandpack-react/dist/index.css";
+import {Sandpack} from '@codesandbox/sandpack-react'
+import Image from 'next/image'
+import '@codesandbox/sandpack-react/dist/index.css'
 
-const code = `export default function App() {
-  return <h1>Hello Sandpack</h1>
-}`;
+const code = `import {useState} from 'react'
+
+export default function App() {
+  const [count, setCount] = useState(0)
+  const onAdd = () => setCount(c => c + 1)
+  return <h1>
+    Hello Sandpack {count} 
+    <button onClick={onAdd}>Add</button>
+  </h1>
+}`
 
 const About = () => {
     return (
         <>
-            <h1 className='font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white'>
-                🚧 Site WIP v0.0.1-beta 🚧
-            </h1>
             <br />
             <br />
             <br />
@@ -34,81 +39,16 @@ const About = () => {
                 </div>
 
                 <div className='w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto'>
-                    <span
-                        style={{
-                            boxSizing: 'border-box',
-                            display: 'inline-block',
-                            overflow: 'hidden',
-                            width: 'initial',
-                            height: 'initial',
-                            background: 'none',
-                            opacity: 1,
-                            border: 0,
-                            margin: 0,
-                            padding: 0,
-                            position: 'relative',
-                            maxWidth: '100%'
-                        }}
-                    >
-                        <span
-                            style={{
-                                boxSizing: 'border-box',
-                                display: 'block',
-                                width: 'initial',
-                                height: 'initial',
-                                background: 'none',
-                                opacity: 1,
-                                border: 0,
-                                margin: 0,
-                                padding: 0,
-                                maxWidth: '100%'
-                            }}
-                        >
-                            <img
-                                alt='Raman Ramanouski'
-                                aria-hidden='true'
-                                src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTc2IiBoZWlnaHQ9IjE3NiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4='
-                                style={{
-                                    display: 'block',
-                                    maxWidth: '100%',
-                                    width: 'initial',
-                                    height: 'initial',
-                                    background: 'none',
-                                    opacity: 1,
-                                    border: 0,
-                                    margin: 0,
-                                    padding: 0
-                                }}
-                            />
-                        </span>
-                        <div
-                            className='rounded-full filter grayscale'
-                            data-nimg='intrinsic'
-                            style={{
-                                position: 'absolute',
-                                inset: 0,
-                                boxSizing: 'border-box',
-                                padding: 0,
-                                border: 'none',
-                                margin: 'auto',
-                                display: 'block',
-                                width: 0,
-                                height: 0,
-                                minWidth: '100%',
-                                maxWidth: '100%',
-                                minHeight: '100%',
-                                maxHeight: '100%',
-                                background: 'black'
-                            }}
-                        />
-                    </span>
+                    <div className='rounded-full block overflow-hidden flex' style={{filter: 'grayscale(100%)'}}>
+                        <Image src='/me.jpg' width='170px' height='170px' />
+                    </div>
                 </div>
             </div>
             <div>
                 <Sandpack
-                    template="react"
+                    template='react'
                     files={{
-                        "/App.js": code,
+                        '/App.js': code
                     }}
                 />
             </div>
